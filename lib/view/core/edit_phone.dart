@@ -42,7 +42,7 @@ class _EditPhoneState extends State<EditPhone> {
               padding: const EdgeInsets.only(bottom: 14),
               child: MainButton(
                 text: "حفظ التعديلات",
-                backGroundColor: const Color(0xff1B9AAA),
+                backGroundColor: primaryColor,
                 textColor: Colors.white,
                 onTap: () {},
               ),

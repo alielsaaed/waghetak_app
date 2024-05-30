@@ -140,7 +140,7 @@ class _EditAccountState extends State<EditAccount> {
             SizedBox(height: constVerticalPadding * 7.5),
             MainButton(
               text: "حفظ التعديلات",
-              backGroundColor: const Color(0xff1B9AAA),
+              backGroundColor: primaryColor,
               textColor: Colors.white,
               onTap: () {},
             ),
