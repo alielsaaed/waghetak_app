@@ -67,6 +67,7 @@ class ReservationCard extends StatelessWidget {
         child: Row(
           children: [
             SizedBox(
+              // k
               width: 100.w,
               height: 100.h,
               child: FadeInImage.memoryNetwork(
