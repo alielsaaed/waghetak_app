@@ -59,7 +59,7 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
           children: [
             Text(
               'الفلترة',
-              style: Theme.of(context).textTheme.headline6,
+              style: Theme.of(context).textTheme.bodyLarge,
             ),
             const SizedBox(height: 16),
             _buildDropdown('من', _locations, _selectedLocation,

@@ -3,29 +3,32 @@ import 'package:waghetak_app/constants/constants.dart';
 
 class TextFormFieldCustom extends StatelessWidget {
   final BuildContext context;
-  final String labelText;
+  final String? labelText;
+
   // final void Function(String) onChanged;
   final TextEditingController controller;
+
   // final String? validatorErrorMessage;
   bool? border = true;
   bool? number = false;
   bool? password = false;
   String? value;
   double length;
+  String? hintText;
 
-  TextFormFieldCustom({
-    super.key,
-    required this.context,
-    required this.labelText,
-    // required this.onChanged,
-    required this.controller,
-    // this.validatorErrorMessage,
-    this.border,
-    this.value,
-    this.number,
-    this.password,
-    this.length = 0,
-  });
+  TextFormFieldCustom(
+      {super.key,
+      required this.context,
+      this.labelText,
+      // required this.onChanged,
+      required this.controller,
+      // this.validatorErrorMessage,
+      this.border,
+      this.value,
+      this.number,
+      this.password,
+      this.length = 0,
+      this.hintText});
 
   @override
   Widget build(BuildContext context) {
@@ -42,6 +45,7 @@ class TextFormFieldCustom extends StatelessWidget {
         keyboardType:
             number == true ? TextInputType.number : TextInputType.text,
         decoration: InputDecoration(
+          hintText: hintText,
           contentPadding: length == 0 ? null : EdgeInsets.only(bottom: length),
           labelText: labelText,
           floatingLabelAlignment: FloatingLabelAlignment.start,
