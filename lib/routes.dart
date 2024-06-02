@@ -3,10 +3,15 @@ import 'package:waghetak_app/view/auth/login_screen.dart';
 import 'package:waghetak_app/view/auth/signup_screen.dart';
 import 'package:waghetak_app/view/core/booking_information_screen.dart';
 import 'package:waghetak_app/view/core/booking_invoice_screen.dart';
+import 'package:waghetak_app/view/core/edit_account.dart';
+import 'package:waghetak_app/view/core/edit_email.dart';
+import 'package:waghetak_app/view/core/edit_password.dart';
+import 'package:waghetak_app/view/core/edit_phone.dart';
 import 'package:waghetak_app/view/core/favorite_screen.dart';
 import 'package:waghetak_app/view/core/home_screen.dart';
 import 'package:waghetak_app/view/core/notifications_screen.dart';
 import 'package:waghetak_app/view/core/payments_screen.dart';
+import 'package:waghetak_app/view/core/settings_screen.dart';
 import 'package:waghetak_app/view/onboarding/onbaording_3.dart';
 import 'package:waghetak_app/view/onboarding/onboarding_1.dart';
 import 'package:waghetak_app/view/onboarding/onboarding_2.dart';
@@ -23,4 +28,9 @@ Map<String, Widget Function(BuildContext)> routes = {
   PaymentsScreen.id: (context) => const PaymentsScreen(),
   BookingInvoiceScreen.id: (context) => const BookingInvoiceScreen(),
   BookingInformationScreen.id: (context) => const BookingInformationScreen(),
+  SettingsScreen.id: (context) => const SettingsScreen(),
+  EditAccount.id: (context) => const EditAccount(),
+  EditEmail.id: (context) => const EditEmail(),
+  EditPhone.id: (context) => const EditPhone(),
+  EditPassword.id: (context) => const EditPassword(),
 };

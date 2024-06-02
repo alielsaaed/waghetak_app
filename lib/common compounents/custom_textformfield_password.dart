@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:waghetak_app/constants/constants.dart';
 
 class PasswordFormFieldCustom extends StatefulWidget {
-  final String labelText;
+  final String? labelText;
   final TextEditingController controller;
-  // final void Function(String) onChanged;
 
-  const PasswordFormFieldCustom({
-    Key? key,
-    required this.labelText,
-    required this.controller,
-    // required this.onChanged,
-  }) : super(key: key);
+  // final void Function(String) onChanged;
+  final String? hintText;
+
+  const PasswordFormFieldCustom(
+      {super.key, this.labelText, required this.controller, this.hintText
+      // required this.onChanged,
+      });
 
   @override
   State<PasswordFormFieldCustom> createState() =>
@@ -46,6 +46,7 @@ class _PasswordFormFieldCustomState extends State<PasswordFormFieldCustom> {
         floatingLabelAlignment: FloatingLabelAlignment.start,
         fillColor: grey.withOpacity(0.5),
         filled: true,
+        hintText: widget.hintText,
         labelStyle: Theme.of(context).textTheme.bodyMedium!.copyWith(
               color: darkGrey,
               overflow: TextOverflow.clip,

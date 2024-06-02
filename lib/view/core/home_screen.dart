@@ -3,6 +3,7 @@ import 'package:waghetak_app/constants/constants.dart';
 import 'package:waghetak_app/view/core/favorite_screen.dart';
 import 'package:waghetak_app/view/core/home_page.dart';
 import 'package:waghetak_app/view/core/notifications_screen.dart';
+import 'package:waghetak_app/view/core/profile_screen.dart';
 import 'package:waghetak_app/view/core/reservation_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -26,7 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
     const HomePage(),
     const FavoriteScreen(),
     const ReservationScreen(),
-    const Center(child: Text('Profile Screen')),
+    ProfileScreen(),
   ];
 
   @override
