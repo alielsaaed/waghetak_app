@@ -27,7 +27,7 @@ class PhoneNumberField extends StatelessWidget {
           return null;
         },
         onInputChanged: onInputChanged,
-        // isEnabled: phone == null ? true : false,
+        isEnabled: phone == null ? true : false,
         inputDecoration: InputDecoration(
           border: InputBorder.none, // Remove input border
           labelText: "رقم الهاتف ",
@@ -41,7 +41,7 @@ class PhoneNumberField extends StatelessWidget {
         ),
         formatInput: false,
         autoValidateMode: AutovalidateMode.disabled,
-        initialValue: PhoneNumber(isoCode: 'SA', phoneNumber: phone),
+        initialValue: PhoneNumber(isoCode: 'LY', phoneNumber: phone),
       ),
     );
   }

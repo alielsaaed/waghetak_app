@@ -1,7 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:waghetak_app/main.dart';
-import 'package:waghetak_app/view/auth/login_screen.dart';
 import 'package:waghetak_app/view/core/settings_screen.dart';
 
 import '../../constants/constants.dart';
@@ -92,10 +90,6 @@ class ProfileScreen extends StatelessWidget {
     ),
     ProfileItem(
       title: "تسجيل الخروج",
-      onNavigationTap: (p0) async {
-        await secureStorage.deleteAll();
-        Navigator.pushReplacementNamed(p0, LoginScreen.id);
-      },
       leadingIcon: Icon(
         Icons.login_outlined,
         color: primaryColor,

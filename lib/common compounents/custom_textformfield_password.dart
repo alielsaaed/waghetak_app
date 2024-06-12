@@ -5,12 +5,12 @@ class PasswordFormFieldCustom extends StatefulWidget {
   final String? labelText;
   final TextEditingController controller;
 
-  final void Function(String) onChanged;
+  // final void Function(String) onChanged;
   final String? hintText;
 
   const PasswordFormFieldCustom(
-      {super.key, this.labelText, required this.controller, this.hintText,
-      required this.onChanged,
+      {super.key, this.labelText, required this.controller, this.hintText
+      // required this.onChanged,
       });
 
   @override
