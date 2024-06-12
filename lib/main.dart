@@ -30,8 +30,23 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => BookingInfoCubit(HomeApi()),
+    // final provider = Provider.of<LocaleProvider>(context);
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider<LoginCubit>(
+          create: (context) => LoginCubit(),
+        ),
+        BlocProvider<RegisterCubit>(
+          create: (context) => RegisterCubit(),
+        ),
+        BlocProvider<FavoriteCubit>(
+          create: (context) => FavoriteCubit(),
+        ),
+        BlocProvider<BookingInfoCubit>(
+          create: (context) => BookingInfoCubit(HomeApi()),
+        ),
+      ],
+
       child: MaterialApp(
         title: 'Flutter Demo',
         theme: theme(),
@@ -48,6 +63,9 @@ class MyApp extends StatelessWidget {
           GlobalWidgetsLocalizations.delegate,
           GlobalCupertinoLocalizations.delegate,
         ],
+        home: const SplashScreen(),
+        routes: routes,
+
       ),
     );
   }
