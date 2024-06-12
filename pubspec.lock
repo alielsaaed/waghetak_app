@@ -397,8 +397,10 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  frontend_server_client:
-    dependency: transitive
+
+  http:
+    dependency: "direct main"
+
     description:
       name: frontend_server_client
       sha256: f64a0333a82f30b0cca061bc3d143813a486dc086b574bfb233b7c1372427694
@@ -789,15 +791,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.8"
-
-  pool:
-    dependency: transitive
-    description:
-      name: pool
-      sha256: "20fe868b6314b322ea036ba325e6fc0711a22948856475e2c2b6306e8ab39c2a"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.5.1"
 
   provider:
     dependency: "direct main"
