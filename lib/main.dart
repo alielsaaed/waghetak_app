@@ -59,7 +59,6 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-
     // final provider = Provider.of<LocaleProvider>(context);
     return MultiBlocProvider(
       providers: [
@@ -90,10 +89,8 @@ class MyApp extends StatelessWidget {
           GlobalWidgetsLocalizations.delegate,
           GlobalCupertinoLocalizations.delegate,
         ],
-
         home: const SplashScreen(),
         routes: routes,
-
       ),
     );
   }
