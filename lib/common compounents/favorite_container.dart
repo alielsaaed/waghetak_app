@@ -3,10 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:waghetak_app/constants/constants.dart';
 import 'package:waghetak_app/view/core/offer_details_screen.dart';
+import '../../model/home_model.dart';
 
 class OfferDetailsContainer extends StatelessWidget {
+  final HomeModel offerDetails;
+
   const OfferDetailsContainer({
     super.key,
+    required this.offerDetails,
   });
 
   @override
@@ -34,9 +38,9 @@ class OfferDetailsContainer extends StatelessWidget {
                         Text(
                           "وكالة فرسان السفر",
                           style:
-                              Theme.of(context).textTheme.bodyLarge!.copyWith(
-                                    color: whiteBackGround,
-                                  ),
+                          Theme.of(context).textTheme.bodyLarge!.copyWith(
+                            color: whiteBackGround,
+                          ),
                         )
                       ],
                     ),
@@ -61,14 +65,14 @@ class OfferDetailsContainer extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
-                "رحلة سياحية ممتازة الى باريس 5000 ريال",
+                offerDetails.miniDescription ?? "No Description",
                 style: Theme.of(context).textTheme.bodyLarge,
               ),
             )
           ],
         ),
       ),
-      openBuilder: (context, action) => OfferDetailsScreen(),
+      openBuilder: (context, action) => OfferDetailsScreen(offerDetails: offerDetails),
     );
   }
 }

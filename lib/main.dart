@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:waghetak_app/routes.dart';
@@ -11,6 +12,8 @@ import 'package:waghetak_app/view/core/home_screen.dart';
 import 'package:waghetak_app/view/core/payments_invoice_screen.dart';
 import 'package:waghetak_app/view/core/reservation_screen.dart';
 import 'package:waghetak_app/view/onboarding/onboarding_1.dart';
+import 'package:waghetak_app/view_model/cubits/booking_cubit/booking_cubit.dart';
+import 'package:waghetak_app/view_model/services/home_api.dart';
 
 void main() {
   runApp(
@@ -27,22 +30,25 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: theme(),
-      home: const HomeScreen(),
-      debugShowCheckedModeBanner: false,
-      routes: routes,
-      supportedLocales: const [
-        Locale("ar"),
-        Locale("en"),
-      ],
-      locale: const Locale("ar"),
-      localizationsDelegates: const [
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
+    return BlocProvider(
+      create: (context) => BookingInfoCubit(HomeApi()),
+      child: MaterialApp(
+        title: 'Flutter Demo',
+        theme: theme(),
+        home: const HomeScreen(),
+        debugShowCheckedModeBanner: false,
+        routes: routes,
+        supportedLocales: const [
+          Locale("ar"),
+          Locale("en"),
+        ],
+        locale: const Locale("ar"),
+        localizationsDelegates: const [
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
+      ),
     );
   }
 }

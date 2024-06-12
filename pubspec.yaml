@@ -47,6 +47,9 @@ dependencies:
   flutter_image_slideshow: ^0.1.6
   syncfusion_flutter_datepicker: ^25.2.4
   transparent_image: ^2.0.1
+  http: ^1.2.1
+  flutter_bloc: ^8.1.6
+  provider: ^6.1.2
 
 
 dev_dependencies:

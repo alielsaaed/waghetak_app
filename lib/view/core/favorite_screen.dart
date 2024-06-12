@@ -15,13 +15,13 @@ class FavoriteScreen extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Flexible(
-            child: ListView.builder(
-              itemBuilder: (context, index) => const OfferDetailsContainer(),
-              itemCount: 5,
-              shrinkWrap: true,
-            ),
-          )
+          // Flexible(
+          //   child: ListView.builder(
+          //     itemBuilder: (context, index) => const OfferDetailsContainer(),
+          //     itemCount: 5,
+          //     shrinkWrap: true,
+          //   ),
+          // )
         ],
       ),
     );
