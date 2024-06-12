@@ -789,6 +789,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.8"
+
   pool:
     dependency: transitive
     description:
@@ -797,6 +798,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.5.1"
+
   provider:
     dependency: "direct main"
     description:
@@ -805,6 +807,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "6.1.2"
+
   pub_semver:
     dependency: transitive
     description:

@@ -14,6 +14,16 @@ import 'package:waghetak_app/view-model/cubits/favorite/favorite_cubit.dart';
 import 'package:waghetak_app/view-model/cubits/login/login_cubit.dart';
 import 'package:waghetak_app/view-model/cubits/register/register_cubit.dart';
 import 'package:waghetak_app/view-model/hive/favorite.dart';
+import 'package:waghetak_app/view/auth/password_forgot_screen.dart';
+import 'package:waghetak_app/view/auth/signup_screen.dart';
+import 'package:waghetak_app/view/core/agency_page_screen.dart';
+import 'package:waghetak_app/view/core/booking_information_screen.dart';
+import 'package:waghetak_app/view/core/home_screen.dart';
+import 'package:waghetak_app/view/core/payments_invoice_screen.dart';
+import 'package:waghetak_app/view/core/reservation_screen.dart';
+import 'package:waghetak_app/view/onboarding/onboarding_1.dart';
+import 'package:waghetak_app/view_model/cubits/booking_cubit/booking_cubit.dart';
+import 'package:waghetak_app/view_model/services/home_api.dart';
 
 late FlutterSecureStorage secureStorage;
 
@@ -23,7 +33,6 @@ void main() async {
   Hive.registerAdapter(FavoriteAdapter());
   await Hive.openBox<Favorite>('favorites');
   secureStorage = const FlutterSecureStorage();
-
   runApp(
     MultiProvider(
       providers: [
@@ -62,11 +71,15 @@ class MyApp extends StatelessWidget {
         BlocProvider<FavoriteCubit>(
           create: (context) => FavoriteCubit(),
         ),
+        BlocProvider<BookingInfoCubit>(
+          create: (context) => BookingInfoCubit(HomeApi()),
+        ),
       ],
       child: MaterialApp(
         title: 'RCT App',
         theme: theme(),
         debugShowCheckedModeBanner: false,
+
         supportedLocales: const [
           Locale("ar"),
           Locale("en"),
