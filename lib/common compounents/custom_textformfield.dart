@@ -9,6 +9,7 @@ class TextFormFieldCustom extends StatelessWidget {
   final TextEditingController controller;
 
   // final String? validatorErrorMessage;
+  final void Function(String) onChanged;
   bool? border = true;
   bool? number = false;
   bool? password = false;
@@ -20,7 +21,7 @@ class TextFormFieldCustom extends StatelessWidget {
       {super.key,
       required this.context,
       this.labelText,
-      // required this.onChanged,
+      required this.onChanged,
       required this.controller,
       // this.validatorErrorMessage,
       this.border,

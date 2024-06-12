@@ -34,16 +34,16 @@ class _EditPasswordState extends State<EditPassword> {
             const Text("كلمة المرور الحالية"),
             SizedBox(height: constVerticalPadding),
             PasswordFormFieldCustom(
-              hintText: "ادخل كلمة المرور الحالية",
-              controller: password,
-            ),
+                hintText: "ادخل كلمة المرور الحالية",
+                controller: password,
+                onChanged: (p0) {}),
             SizedBox(height: constVerticalPadding),
             const Text("كلمة المرور الجديدة"),
             SizedBox(height: constVerticalPadding),
             PasswordFormFieldCustom(
-              hintText: "ادخل كلمة المرور الجديدة",
-              controller: passwordConfirm,
-            ),
+                hintText: "ادخل كلمة المرور الجديدة",
+                controller: passwordConfirm,
+                onChanged: (p0) {}),
             const Spacer(flex: 1),
             Padding(
               padding: const EdgeInsets.only(bottom: 14),

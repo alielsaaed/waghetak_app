@@ -58,6 +58,9 @@ class _PasswordForgotScreenState extends State<PasswordForgotScreen> {
               PasswordFormFieldCustom(
                 labelText: "ادخل كلمة المرور",
                 controller: password,
+                onChanged: (p0) {
+                  
+                },
               ),
               SizedBox(height: constVerticalPadding),
               Text(
@@ -70,6 +73,9 @@ class _PasswordForgotScreenState extends State<PasswordForgotScreen> {
               PasswordFormFieldCustom(
                 labelText: "ادخل كلمة المرور",
                 controller: passwordConfirm,
+                onChanged: (p0) {
+                  
+                },
               ),
               SizedBox(height: constVerticalPadding),
               MainButton(
