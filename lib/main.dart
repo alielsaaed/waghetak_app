@@ -59,6 +59,7 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
+
     // final provider = Provider.of<LocaleProvider>(context);
     return MultiBlocProvider(
       providers: [
@@ -79,7 +80,6 @@ class MyApp extends StatelessWidget {
         title: 'RCT App',
         theme: theme(),
         debugShowCheckedModeBanner: false,
-
         supportedLocales: const [
           Locale("ar"),
           Locale("en"),
@@ -90,8 +90,10 @@ class MyApp extends StatelessWidget {
           GlobalWidgetsLocalizations.delegate,
           GlobalCupertinoLocalizations.delegate,
         ],
+
         home: const SplashScreen(),
         routes: routes,
+
       ),
     );
   }
