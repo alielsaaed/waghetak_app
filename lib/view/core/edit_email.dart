@@ -35,9 +35,6 @@ class _EditEmailState extends State<EditEmail> {
               SizedBox(height: constVerticalPadding),
               TextFormFieldCustom(
                 context: context,
-                onChanged: (p0) {
-                      
-                    },
                 controller: email,
                 hintText: "Wjhtak@gmail.com",
               ),
