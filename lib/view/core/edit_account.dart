@@ -71,6 +71,9 @@ class _EditAccountState extends State<EditAccount> {
                     hintText: "أحمد",
                     context: context,
                     controller: firstName,
+                    onChanged: (p0) {
+                      
+                    },
                   ),
                 ),
                 SizedBox(
@@ -79,6 +82,7 @@ class _EditAccountState extends State<EditAccount> {
                     hintText: "محمود",
                     context: context,
                     controller: secondName,
+                    onChanged: (p0) {}
                   ),
                 ),
               ],
